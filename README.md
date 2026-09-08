@@ -12,22 +12,21 @@ Tourism is an important sector for Timor-Leste. However, tourism information ava
 
 This project develops a tourism intelligence system that collects tourism data from online sources, stores and preprocesses the data, performs Exploratory Data Analysis (EDA), applies data mining techniques, analyzes tourist reviews, groups tourism destinations using K-Means clustering, and provides destination recommendations based on user preferences.
 
-The system also supports **near-real-time data collection using a 5-minute polling interval**, allowing tourism data to be periodically updated while the system is running.
+The system also supports **near-real-time data collection using a 5-minute polling interval**, allowing tourism data to be periodically updated while the application is running.
 
-### Project Title
+---
 
-**Timor-Leste Tourism Data Mining & Near-Real-Time Recommendation System**
+## 🎓 Capstone Project Information
 
-### Case Study
-
-**Tourism Destinations and Tourist Reviews in Timor-Leste**
-
-### Main Methods
-
-- K-Means Clustering
-- Sentiment Analysis
-- Content-Based Recommendation
-- Exploratory Data Analysis (EDA)
+| Information | Details |
+|---|---|
+| Institution | Dili Institute of Technology (DIT) |
+| Program | Computer Science |
+| Course | Mining and Exploring |
+| Year | 2026 |
+| Project Topic | Data Mining no Rekomendasaun Turizmu Timor-Leste |
+| Case Study | Tourism Destinations and Tourist Reviews in Timor-Leste |
+| Main Techniques | Clustering, Recommendation, Sentiment Analysis |
 
 ---
 
@@ -76,18 +75,51 @@ To develop a tourism data mining and recommendation system that analyzes tourism
 
 The system is designed to collect tourism information from online tourism-related sources using an online data collection service.
 
-### Primary Data Source
+## Primary Data Source
 
 - Apify
 - Google Places-related tourism/location data
 
-### Data Type
+## Data Collection Method
 
-The collected data includes tourism destinations and tourist reviews.
+The system uses an online data collection service to obtain tourism destination information and tourist review data.
 
-### Main Destination Data
+The collected data is validated and stored in the project database before preprocessing and analysis.
 
-Examples of destination attributes include:
+## Collection Information
+
+| Item | Details |
+|---|---|
+| Primary Source | Apify |
+| Data Type | Tourism destinations and tourist reviews |
+| Related Data Source | Google Places-related tourism/location data |
+| Collection Method | Periodic data collection |
+| Update Interval | Every 5 minutes |
+| Collection Date | **[FILL IN COLLECTION DATE]** |
+| Collection Time | **[FILL IN COLLECTION TIME]** |
+| Source URL / API | **[FILL IN SOURCE URL OR API DOCUMENTATION]** |
+
+> Note: The system uses the term **near-real-time** according to the DIT Capstone Manual because the data collection process uses periodic polling rather than continuous real-time streaming.
+
+---
+
+# 📦 Dataset
+
+The current project dataset contains tourism destination information and tourist review information.
+
+## Dataset Statistics
+
+| Dataset / Metric | Value |
+|---|---:|
+| Tourism Destinations | 569 |
+| Stored Tourist Reviews | 3,190 |
+| Destination Review Count | 42,470 |
+| K-Means Clusters | 4 |
+| Clustering Features | 6 |
+
+### Destination Data
+
+Main destination attributes include:
 
 - Destination name
 - Address
@@ -105,9 +137,9 @@ Examples of destination attributes include:
 - Place ID
 - Source information
 
-### Main Review Data
+### Review Data
 
-Examples of review attributes include:
+Main review attributes include:
 
 - Destination name
 - Place ID
@@ -123,35 +155,31 @@ Examples of review attributes include:
 
 ---
 
-# ⚡ Near-Real-Time Data Collection
+# 🏗️ System Architecture
 
-The system periodically checks and updates tourism data while the application is running.
-
-The project follows the terminology specified in the DIT Capstone Manual:
-
-> **Near-real-time**
-
-rather than true real-time streaming.
-
-### Update Interval
-
-**Every 5 minutes**
-
-The data collection scheduler periodically attempts to collect updated tourism data.
-
-The general process is:
+The system follows the following data processing architecture:
 
 ```text
 Online Tourism Data Source
           ↓
 Data Collection
           ↓
+Raw Tourism Data
+          ↓
 Data Validation
           ↓
-Database
+Database Storage
           ↓
-Preprocessing
+Data Preprocessing
           ↓
-Analytics / Data Mining
+Feature Engineering
           ↓
-Dashboard
+Exploratory Data Analysis
+          ↓
+K-Means Clustering
+          ↓
+Sentiment Analysis
+          ↓
+Recommendation System
+          ↓
+Tourism Dashboard
