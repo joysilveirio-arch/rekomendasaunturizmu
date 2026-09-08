@@ -24,12 +24,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Upgrade pip
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+
+      - name: Verify Apify client
+        run: |
+          python -m pip show apify-client
+          python -c "from apify_client import ApifyClient; print('Apify client OK')"
 
       - name: Run tests
         run: |
-          pytest
+          python -m pytest
