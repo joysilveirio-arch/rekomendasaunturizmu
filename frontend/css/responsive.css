@@ -1,0 +1,176 @@
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktops */
+@media (max-width: 1200px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktops & Laptops */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    :root {
+        --topbar-height: 60px;
+    }
+    
+    .topbar {
+        padding: 0 16px;
+    }
+    
+    .topbar-brand h1 {
+        font-size: 16px;
+    }
+    
+    .page-content {
+        padding: 16px;
+    }
+    
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-box {
+        max-width: 180px;
+    }
+    
+    .user-name {
+        display: none;
+    }
+    
+    .page-header h2 {
+        font-size: 22px;
+    }
+    
+    .sentiment-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .filter-bar {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-group select,
+    .filter-group input {
+        flex: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .kpi-card {
+        padding: 14px 16px;
+    }
+    
+    .kpi-value {
+        font-size: 20px;
+    }
+    
+    .kpi-label {
+        font-size: 12px;
+    }
+    
+    .quick-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .dashboard-welcome h1 {
+        font-size: 24px;
+    }
+    
+    .topbar-right {
+        gap: 8px;
+    }
+    
+    .search-box {
+        max-width: 140px;
+        padding: 6px 12px;
+    }
+    
+    .search-box input {
+        font-size: 12px;
+    }
+    
+    .notification-btn .badge {
+        width: 16px;
+        height: 16px;
+        font-size: 8px;
+    }
+    
+    .chart-wrapper {
+        height: 200px;
+    }
+    
+    .sentiment-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    table th,
+    table td {
+        padding: 8px 10px;
+    }
+    
+    .toast {
+        min-width: auto;
+        max-width: 90vw;
+        padding: 12px 16px;
+    }
+}

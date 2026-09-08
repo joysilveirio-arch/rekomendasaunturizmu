@@ -1,0 +1,6 @@
+from backend.services.data_collector import DataCollectorService
+from backend.services.preprocessing import PreprocessingService
+from backend.services.sentiment import SentimentAnalyzer
+from backend.services.clustering import ClusteringService
+from backend.services.recommendation import RecommendationService
+from backend.services.analytics import AnalyticsService
